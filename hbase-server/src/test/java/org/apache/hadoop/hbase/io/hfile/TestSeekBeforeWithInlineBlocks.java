@@ -20,6 +20,9 @@ package org.apache.hadoop.hbase.io.hfile;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+
+import edu.illinois.CTestClass;
+import edu.illinois.CTestJUnit4Runner2;
 import java.io.IOException;
 import java.util.Random;
 import org.apache.hadoop.conf.Configuration;
@@ -42,9 +45,12 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass
 @Category({ IOTests.class, MediumTests.class })
 public class TestSeekBeforeWithInlineBlocks {
 
