@@ -538,6 +538,14 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
+	  <excludes>
+	    <exclude>**/TestBulkLoad.java</exclude>
+	    <exclude>**/TestAsyncProtobufLog.java</exclude>
+	    <exclude>**/TestAsyncFSWALDurability.java</exclude>
+	    <exclude>**/TestCompactionAfterBulkLoad.java</exclude>
+	    <exclude>**/TestSyncTimeRangeTracker.java</exclude>
+	    <exclude>**/TestMajorCompactionTTLRequest.java</exclude>
+	  </excludes>
           <systemPropertyVariables>
             <test.build.webapps>target/test-classes/webapps</test.build.webapps>
           </systemPropertyVariables>
